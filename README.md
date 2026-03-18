@@ -22,9 +22,16 @@ npm install
 npx cypress open
 
 ## Test Design
-- Data-driven testing using fixtures
-- Reusable custom commands
-- Separation of test logic and test data
+- Reusable login flow
+- Positive and negative scenario coverage
+- End-to-end user workflow validation
+
+## Scenarios
+- Login with valid credentials
+- Login with invalid credentials
+- Add product to cart
+- Remove product from cart
+- Logout flow
 
 ## Key Focus
 - Stability

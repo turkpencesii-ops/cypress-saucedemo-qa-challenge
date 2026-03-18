@@ -1,5 +1,6 @@
 describe('Logout Test', () => {
-  beforeEach(() => {
+  beforeEach(function () {
+    cy.visit('https://www.saucedemo.com/')
     cy.fixture('users').as('users')
   })
 
