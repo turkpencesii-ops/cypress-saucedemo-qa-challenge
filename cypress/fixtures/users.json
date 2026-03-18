@@ -4,7 +4,7 @@
     "password": "secret_sauce"
   },
   "invalidUser": {
-    "username": "standard_user",
-    "password": "wrong"
+    "username": "wrong_user",
+    "password": "wrong_pass"
   }
 }
