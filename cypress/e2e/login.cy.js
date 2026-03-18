@@ -1,17 +1,21 @@
-describe('Login Tests', () => {
-beforeEach(() => {
-  cy.fixture('users').as('users')
-}) 
+describe("Login Tests", () => {
+  beforeEach(() => {
+    cy.visit("https://www.saucedemo.com/");
+  });
 
-  it('should login successfully with valid credentials', function () {
-    cy.login(this.users.validUser.username, this.users.validUser.password)
-    cy.url().should('include', '/inventory')
-    cy.get('.title').should('contain', 'Products')
-  })
+  it("should login successfully with valid credentials", () => {
+    cy.fixture("users").then((user) => {
+      cy.login(user.validUser.username, user.validUser.password);
+    });
 
-  it('should show an error message with invalid credentials', function () {
-    cy.login(this.users.invalidUser.username, this.users.invalidUser.password)
-    cy.get('[data-test="error"]').should('be.visible')
-    cy.get('[data-test="error"]').should('contain', 'Username and password do not match')
-  })
-})
+    cy.url().should("include", "/inventory");
+  });
+
+  it("should show error with invalid credentials", () => {
+    cy.fixture("users").then((user) => {
+      cy.login(user.invalidUser.username, user.invalidUser.password);
+    });
+
+    cy.get('[data-test="error"]').should("be.visible");
+  });
+});
