@@ -1,6 +1,6 @@
 # Cypress Saucedemo QA Challenge
 
-This project demonstrates end-to-end test automation using Cypress.
+Practical Cypress automation sample covering core end-to-end user flows.
 
 ## Covered Scenarios
 - Positive login
