@@ -1,4 +1,4 @@
-# Cypress E2E Test Automation
+# Cypress Saucedemo QA Challenge
 
 This project demonstrates end-to-end test automation using Cypress.
 
